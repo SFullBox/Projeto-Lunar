@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lunar</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <img src="img/Vector (1).svg" alt="logo" id="llogo">
+        <span>Partidas</span>
+        <button onclick="openModal()" id="new">Adicionar</button>
+      </div>
+
+      <div class="divTable">
+        <table>
+          <thead>
+            <tr>
+              <th>Resultado</th>
+              <th>Rounds</th>
+              <th>Abates</th>
+              <th>Mortes</th>
+              <th>HS</th>
+              <th>Imagem</th>
+              <th class="acao">Editar</th>
+              <th class="acao">Excluir</th>
+            </tr>
+          </thead>
+          <tbody>
+            <ul id="loadItens()"></ul>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="modal-container">
+        <div class="modal">
+          <h2>Adicionar/Editar Item</h2>
+          <form>
+            <label class="resultado1" for="m-resultado">Resultado:</label>
+            <select id="m-resultado">
+              <option value="Vitória">Vitória</option>
+              <option value="Derrota">Derrota</option>
+            </select>
+      
+            <label for="m-partida">Rounds:</label>
+            <input type="text" id="m-round" placeholder="Número da Partida" class="partida1">
+      
+            <label for="m-abates">Abates:</label>
+            <input type="number" id="m-abates" placeholder="Quantidade de abates" class="abates1">
+      
+            <label for="m-mortes">Mortes:</label>
+            <input type="number" id="m-mortes" placeholder="Quantidade de mortes" class="mortes1">
+      
+            <label for="m-hs">Headshots:</label>
+            <input type="number" id="m-hs" placeholder="Quantidade de headshots" class="hs1">
+      
+            <label class="img1" for="m-imagem">Imagem:</label>
+            <input type="file" id="m-imagem" class="img1">
+
+            <button type="submit" id="btnSalvar">Salvar</button>
+          </form>
+        </div>
+      </div>
+      
+    </div>
+
+    <script src="script.js" defer></script>
+
+  </body>
+</html>
